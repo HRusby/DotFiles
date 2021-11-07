@@ -1,0 +1,8 @@
+[user]
+	name = HRusby
+	email = harrygeorger@hotmail.com
+[core]
+	editor = vim
+	excludesfile = /home/harry/.gitignore
+[init]
+	defaultBranch = master
