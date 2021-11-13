@@ -14,6 +14,7 @@ set $left h
 set $down j
 set $up k
 set $right l
+set $gapChange 10
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -189,6 +190,10 @@ bindsym $mod+r mode "resize"
 for_window [class=".*"] border pixel 0
 gaps inner 10
 gaps outer 10
+bindsym $mod+Shift+d	gaps inner all set 0; gaps outer all set 0
+bindsym $mod+Shift+t	gaps inner all set 10; gaps outer all set 10
+bindsym $mod+Shift+plus gaps horizontal current plus $gapChange; gaps vertical current plus $gapChange
+bindsym $mod+Shift+minus gaps horizontal current minus $gapChange; gaps vertical current minus $gapChange
 #smart_gaps on
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -201,3 +206,4 @@ bar {
 exec alacritty &
 exec /home/harry/.screenlayout/defaultLayout.sh &
 exec dunst &
+exec /home/harry/scripts/wallPaperScript.sh &
