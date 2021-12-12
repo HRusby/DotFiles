@@ -33,3 +33,4 @@ alias pacman-remove-orphans='sudo pacman -Rns $(pacman -Qtdq)'
 set-bg () {
 	feh --bg-fill --randomize ~/Wallpapers/*	
 }
+set-bg
