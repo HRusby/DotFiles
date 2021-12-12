@@ -203,7 +203,11 @@ bar {
         position    top
 }
 
-exec alacritty &
+###############
+#Custom Macros#
+###############
+
+
 exec /home/harry/.screenlayout/defaultLayout.sh &
 exec dunst &
 exec /home/harry/scripts/wallPaperScript.sh &
