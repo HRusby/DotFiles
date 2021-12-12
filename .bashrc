@@ -29,3 +29,7 @@ alias config='/usr/bin/git --git-dir=/home/harry/.cfg/ --work-tree=/home/harry'
 
 alias pacman-show-orphans='pacman -Qtdq'
 alias pacman-remove-orphans='sudo pacman -Rns $(pacman -Qtdq)'
+
+set-bg () {
+	feh --bg-fill --randomize ~/Wallpapers/*	
+}
