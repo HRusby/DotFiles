@@ -25,7 +25,7 @@ PKGS=(
 	'signal-desktop',# Encrypted Comms
 	'sleek', 	# ToDo List
 	'tmux', 	# Terminal Multiplexer
-
+	'xwallpaper', 	# Wallpaper Controller
 )
 
 for PKG in "${PKGS[@]}"; do
