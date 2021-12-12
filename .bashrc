@@ -13,6 +13,16 @@ _WHITE="$(tput setaf 7)"
 _NC="$(tput sgr0)"
 
 
+export GOPATH="/home/harry/Development/argo"
+
+pulse-discover-devices () {
+	pacmd unload-module module-udev-detect && pacmd load-module module-udev-detect	
+}
+
+vim () {
+	nvim $@
+}
+
 PS1="[\[\${_CYAN}\]\u\[\${_BLUE}\]@\[\${_CYAN}\]\h]\[\${_WHITE}\] \@ \w \n\$\[${_NC}\] "
 
 alias config='/usr/bin/git --git-dir=/home/harry/.cfg/ --work-tree=/home/harry'
