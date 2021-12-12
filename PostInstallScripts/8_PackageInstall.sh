@@ -19,13 +19,13 @@ PKGS=(
 	'aspnet-runtime', 	# Dotnet Dev
 	'docker',	# Containerisation
 	'docker-compose'# Containerisation
-	'dolphin',	# File Manager
+	'thunar',	# File Manager
 	'firefox',	# Web Browser
 	'dotnet-sdk', 	# Dotner Dev
 	'signal-desktop',# Encrypted Comms
 	'sleek', 	# ToDo List
 	'tmux', 	# Terminal Multiplexer
-	'xwallpaper', 	# Wallpaper Controller
+	'feh', 	# Wallpaper Controller
 )
 
 for PKG in "${PKGS[@]}"; do
