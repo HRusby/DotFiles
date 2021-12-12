@@ -210,4 +210,3 @@ bar {
 
 exec /home/harry/.screenlayout/defaultLayout.sh &
 exec dunst &
-exec /home/harry/scripts/wallPaperScript.sh &
