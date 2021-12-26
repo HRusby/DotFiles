@@ -1,0 +1,5 @@
+set-bg(){
+	wallpapers=(~/Wallpapers/*)
+	wallpaper=${wallpapers[RANDOM % ${#wallpapers[@]}]}
+	feh --bg-fill --randomize $wallpaper	
+}
