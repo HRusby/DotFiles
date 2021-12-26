@@ -30,6 +30,4 @@ alias config='/usr/bin/git --git-dir=/home/harry/.cfg/ --work-tree=/home/harry'
 alias pacman-show-orphans='pacman -Qtdq'
 alias pacman-remove-orphans='sudo pacman -Rns $(pacman -Qtdq)'
 
-for f in ~/scripts/*; do source $f; done
-# Set Wallpaper from script in ~/scripts/set-bg
-set-bg
+export PATH="/home/harry/scripts:$PATH"
