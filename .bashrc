@@ -13,7 +13,7 @@ _WHITE="$(tput setaf 7)"
 _NC="$(tput sgr0)"
 
 
-export GOPATH="/home/harry/Development/argo"
+export GOPATH="/home/harry/go"
 
 pulse-discover-devices () {
 	pacmd unload-module module-udev-detect && pacmd load-module module-udev-detect	
@@ -30,6 +30,6 @@ alias config='/usr/bin/git --git-dir=/home/harry/.cfg/ --work-tree=/home/harry'
 alias pacman-show-orphans='pacman -Qtdq'
 alias pacman-remove-orphans='sudo pacman -Rns $(pacman -Qtdq)'
 
-set-bg () {
-	feh --bg-fill --randomize ~/Wallpapers/*	
-}
+for f in ~/scripts/*; do source $f; done
+# Set Wallpaper from script in ~/scripts/set-bg
+set-bg
