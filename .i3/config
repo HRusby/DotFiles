@@ -51,7 +51,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec alacritty
-
+bindsym $mod+Shift+f exec firefox
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -206,8 +206,6 @@ bar {
 ###############
 #Custom Macros#
 ###############
-
 exec /home/harry/.screenlayout/defaultLayout.sh &
 exec dunst &
-exec alacritty &
-exec feh --bg-fill --randomize ~/Wallpapers/* &
+exec /home/harry/scripts/set-bg
