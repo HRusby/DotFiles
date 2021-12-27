@@ -207,6 +207,3 @@ bindsym $mod+Shift+minus gaps horizontal current minus $gapChange; gaps vertical
 #Custom Macros#
 ###############
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec /home/harry/.screenlayout/defaultLayout.sh &
-exec dunst &
-exec /home/harry/scripts/set-bg
