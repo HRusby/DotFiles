@@ -14,7 +14,8 @@ PKGS=(
 	'neovim',	# NeoVim Editor
 	'i3',		# Window Manager
 	'spotify',	# Music Player
-	'visual-studio-code-insiders-bin', # VS Code
+    'lightdm'   # Display Manager
+	#'visual-studio-code-insiders-bin', # VS Code
 	#'dbeaver', 	# Database Editor
 	'alacritty', 	# Terminal Emulator
 	'docker',	# Containerisation
