@@ -28,6 +28,10 @@ PKGS=(
 	#'sleek', 	# ToDo List
 	'tmux', 	# Terminal Multiplexer
 	'feh', 	# Wallpaper Controller
+
+    # NVim requirements
+    'ripgrep',  # Grep CMD Tool for telescope
+    'fd',       # Find Alternative for Telescope
 )
 
 for PKG in "${PKGS[@]}"; do
