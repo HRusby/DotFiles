@@ -31,8 +31,16 @@ set cmdheight=2
 set completeopt=menuone,noinsert,noselect
 call plug#begin('~/.vim/plugged')
 Plug 'nvim-telescope/telescope.nvim'    
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'gruvbox-community/gruvbox'
 " Fugitive, UndoTree, TreeSitter, 
 call plug#end()
 
 colorscheme gruvbox
+let mapleader = " "
+
+" Remaps
+" nnor NormalMode(n)NorRecursive(nore)map
+nnoremap <leader>ps <cmd>lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
