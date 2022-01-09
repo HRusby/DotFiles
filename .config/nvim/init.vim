@@ -1,5 +1,3 @@
-
-" LHS Margin Options
 set number
 set relativenumber
 
@@ -8,7 +6,6 @@ set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
 set smartindent
-
 
 " Backup/Swap options
 set noswapfile
@@ -29,6 +26,7 @@ set cmdheight=2
 
 " Completion Options
 set completeopt=menuone,noinsert,noselect
+
 call plug#begin('~/.vim/plugged')
 Plug 'nvim-telescope/telescope.nvim'    
 Plug 'nvim-lua/plenary.nvim'
@@ -42,5 +40,19 @@ colorscheme gruvbox
 let mapleader = " "
 
 " Remaps
-" nnor NormalMode(n)NorRecursive(nore)map
+" nnor NormalMode(n)NoRecursive(nore)map
 nnoremap <leader>ps <cmd>lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
+
+nnoremap oo o<ESC>
+nnoremap OO O<ESC>
+
+" Disable arrow keys for learning purpose
+for key in ['<Left>', '<Right>', '<Up>', '<Down>']
+    exec 'noremap' key '<nop>'
+    exec 'noremap!' key '<nop>'
+endfor
+"noremap <Left> <nop>
+"noremap <Right> <nop>
+"noremap <Up> <nop>
+"noremap <Down> <nop>
+
