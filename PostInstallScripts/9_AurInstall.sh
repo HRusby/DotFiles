@@ -12,6 +12,7 @@ PKGS=(
 	# ----- Classification -----
 	'spotify'	# Music Player
 	'polybar'	# I3 Bar
+    'obsidian'  # Note Taking
 )
 
 installYay(){

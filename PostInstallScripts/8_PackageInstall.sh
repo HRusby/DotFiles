@@ -28,7 +28,7 @@ PKGS=(
 	#'sleek', 	# ToDo List
 	'tmux', 	# Terminal Multiplexer
 	'feh', 	# Wallpaper Controller
-
+    'xclip'     # Clipboard Cli Utility
     # NVim requirements
     'ripgrep',  # Grep CMD Tool for telescope
     'fd',       # Find Alternative for Telescope
