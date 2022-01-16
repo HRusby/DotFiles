@@ -40,8 +40,8 @@ colorscheme gruvbox
 let mapleader = " "
 
 " Remaps
-" nnor NormalMode(n)NoRecursive(nore)map
-nnoremap <leader>ps <cmd>lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
+nnoremap <leader>fs <cmd>lua require('telescope.builtin').live_grep()<CR>
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<CR>
 
 nnoremap oo o<ESC>
 nnoremap OO O<ESC>
