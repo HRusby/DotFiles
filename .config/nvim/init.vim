@@ -23,6 +23,7 @@ set signcolumn=yes
 set colorcolumn=100
 " More space for Messages
 set cmdheight=2
+set timeoutlen=200
 
 " Completion Options
 set completeopt=menuone,noinsert,noselect
@@ -33,6 +34,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'gruvbox-community/gruvbox'
+
 " Fugitive, UndoTree, TreeSitter, 
 call plug#end()
 
@@ -45,6 +47,7 @@ nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<CR>
 
 nnoremap oo o<ESC>
 nnoremap OO O<ESC>
+
 
 " Disable arrow keys for learning purpose
 for key in ['<Left>', '<Right>', '<Up>', '<Down>']
