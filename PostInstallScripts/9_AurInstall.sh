@@ -13,6 +13,7 @@ PKGS=(
 	'spotify'	# Music Player
 	'polybar'	# I3 Bar
     'obsidian'  # Note Taking
+    'omnisharp-roslyn'
 )
 
 installYay(){
