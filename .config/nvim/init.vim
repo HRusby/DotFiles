@@ -29,16 +29,33 @@ set timeoutlen=200
 set completeopt=menuone,noinsert,noselect
 
 call plug#begin('~/.vim/plugged')
-Plug 'nvim-telescope/telescope.nvim'    
-Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+" LSP & AutoComplete
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
+
+" Telescope + Requirements
+Plug 'nvim-telescope/telescope.nvim'    
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'gruvbox-community/gruvbox'
+Plug 'nvim-lua/plenary.nvim'
 
 " Fugitive, UndoTree, TreeSitter, 
 call plug#end()
 
 colorscheme gruvbox
+lua << EOF
+local pid = vim.fn.getpid()
+local omnisharp_bin="/usr/lib/omnisharp-roslyn/OmniSharp"
+require'lspconfig'.omnisharp.setup{
+    cmd = { omnisharp_bin, "--languageserver", "--hostPID", tostring(pid) };
+}
+EOF
+
 let mapleader = " "
 
 " Remaps
