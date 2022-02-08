@@ -6,7 +6,7 @@ local options = {
 	tabstop						= tabsInSpaces,					-- # Spaces to display a tab as
 	softtabstop					= tabsInSpaces,					-- # Spaces to remove when backspacing
 	shiftwidth					= tabsInSpaces,					-- # Spaces to display normal mode indenting
-	expandtab					= false,						-- Don't expand tabs to spaces
+	expandtab					= true,						-- Don't expand tabs to spaces
 	smartindent					= true,							-- Auto Indent for brace pairs
 
 	swapfile					= false,
