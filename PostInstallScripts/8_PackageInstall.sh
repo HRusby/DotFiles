@@ -25,6 +25,7 @@ PKGS=(
 	'dotnet-sdk', 	# Dotner Dev
 	'aspnet-runtime', 	# Dotnet Dev
 	'signal-desktop',# Encrypted Comms
+	'tree',						# Cli directory visualisation
 	#'sleek', 	# ToDo List
 	'tmux', 	# Terminal Multiplexer
 	'feh', 	# Wallpaper Controller
