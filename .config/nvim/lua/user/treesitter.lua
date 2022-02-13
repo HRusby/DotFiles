@@ -21,4 +21,8 @@ configs.setup {
     max_file_lines = nil, -- Do not enable for files with more than n lines, integer
     disable = { "" }, -- List of languages to disable rainbow for
   },
+  context_commentstring = {
+    enable = true,
+    enable_autocmd = false,
+  }
 }
