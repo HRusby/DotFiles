@@ -22,7 +22,7 @@ local options = {
 	signcolumn					= "yes",
 	colorcolumn					= "100",
 	cmdheight					= 2,
-	timeoutlen					= 200,
+	timeoutlen					= 500,
 
 	-- CompletionOptions
 	completeopt					= {"menuone", "noinsert", "noselect"},
