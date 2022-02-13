@@ -14,6 +14,7 @@ configs.setup {
     additional_vim_regex_highlighting = true,
   },
   indent = { enable = true, disable = { "yaml" } },
+  autopairs = { enable = true },
   rainbow = {
     enable = true,
     extended_mode = true, -- Also highlight non-bracket delimiters e.g. html tags, boolean or table: lang -> boolean
