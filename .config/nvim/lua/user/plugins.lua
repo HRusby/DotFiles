@@ -86,10 +86,7 @@ return packer.startup(function(use)
 
   -- NVim-Tree --
   use "kyazdani42/nvim-web-devicons"
-  use {
-    "kyazdani42/nvim-tree.lua",
-    commit="ec7043c53f3baae64d0e5e7d821951a079eb3384"
-  }
+  use "kyazdani42/nvim-tree.lua"
 
   --Bufferline --
   use "akinsho/bufferline.nvim"
