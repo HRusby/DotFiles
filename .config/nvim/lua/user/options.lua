@@ -1,4 +1,4 @@
-tabsInSpaces					= 2								-- I opt for tabs and spaces to be displayed the same
+local tabsInSpaces					= 2								-- I opt for tabs and spaces to be displayed the same
 local options = {
 	number						  = true,							-- Show LineNumber
 	relativenumber			= true,							-- Show Line Numbers relative to current line

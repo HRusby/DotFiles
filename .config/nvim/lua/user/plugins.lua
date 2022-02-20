@@ -51,6 +51,7 @@ return packer.startup(function(use)
   use "gruvbox-community/gruvbox"
   use "shaunsingh/nord.nvim"
   use "rebelot/kanagawa.nvim"
+  use "sainnhe/everforest"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -85,7 +86,10 @@ return packer.startup(function(use)
 
   -- NVim-Tree --
   use "kyazdani42/nvim-web-devicons"
-  use "kyazdani42/nvim-tree.lua"
+  use {
+    "kyazdani42/nvim-tree.lua",
+    commit="ec7043c53f3baae64d0e5e7d821951a079eb3384"
+  }
 
   --Bufferline --
   use "akinsho/bufferline.nvim"
