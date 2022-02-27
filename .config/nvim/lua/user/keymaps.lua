@@ -71,6 +71,7 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- Telescope --
 keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
 keymap("n", "<leader>g", "<cmd>lua require'telescope.builtin'.live_grep()<cr>", opts)
+keymap("n", "<leader>p", "<cmd>lua require'telescope'.extensions.projects.projects()<cr>", opts)
 
 -- Open NvimTree Pane
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
