@@ -3,8 +3,9 @@ Source of DotFiles
 
 Set up on new system:
 
-    DotFileDirectory=".cfg"
+    DotFileDirectory=".dotfiles"
     DotFileRepoUrl=""
+    BranchToUse="Base"
     
     #Add Alias to current shell and bashrc and add location to .gitignore
     echo "alias config='/usr/bin/git --git-dir=$HOME/$DotFileDirectory/ --work-tree=$HOME'" >> $HOME/.bashrc
@@ -13,5 +14,5 @@ Set up on new system:
     
     # Clone Remote repo to defined location
     git clone --bare $DotFileRepoUrl $HOME/$DotFileDirectory
-    config checkout
+    config checkout $BranchToUse
     config config --local status.showUntrackedFiles no
