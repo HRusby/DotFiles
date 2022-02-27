@@ -36,6 +36,7 @@ PKGS=(
   'tmux',
   'wget',
   'bash-completion',
+  'lazygit',
   # Language Servers
   'yaml-language-server',
   'lua-language-server',
