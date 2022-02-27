@@ -74,3 +74,4 @@ keymap("n", "<leader>g", "<cmd>lua require'telescope.builtin'.live_grep()<cr>", 
 
 -- Open NvimTree Pane
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+keymap("n", "<leader>kf", ":Format<cr>", opts)
