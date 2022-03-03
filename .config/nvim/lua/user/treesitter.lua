@@ -1,3 +1,14 @@
+local status_ok, install = pcall(require, "nvim-treesitter.install")
+if not status_ok then
+  vim.notify("nvim-treesitter.install not available")
+  return
+end
+
+install.command_extra_args = {
+  curl = { "-k" },
+  wget = { "--no-check-certificate" },
+}
+
 local status_ok, configs = pcall(require, "nvim-treesitter.configs")
 if not status_ok then
   vim.notify("nvim-treesitter.configs not available")
