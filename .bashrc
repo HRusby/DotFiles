@@ -25,7 +25,7 @@ vim () {
 
 PS1="[\[\${_CYAN}\]\u\[\${_BLUE}\]@\[\${_CYAN}\]\h]\[\${_WHITE}\] \@ \w \n\$\[${_NC}\] "
 
-alias config='/usr/bin/git --git-dir=/home/harry/.cfg/ --work-tree=/home/harry'
+alias config='/usr/bin/git --git-dir=/home/harry/.dotfiles/ --work-tree=/home/harry'
 
 alias pacman-show-orphans='pacman -Qtdq'
 alias pacman-remove-orphans='sudo pacman -Rns $(pacman -Qtdq)'
