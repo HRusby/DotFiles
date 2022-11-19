@@ -39,6 +39,8 @@ PKGS=(
   'lazygit'
   'pulsemixer'
   'blueman'
+  'xrandr'
+  'arandr'
   # Language Servers
   'yaml-language-server'
   'lua-language-server'
