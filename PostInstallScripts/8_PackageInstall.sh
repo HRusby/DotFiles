@@ -11,38 +11,40 @@ cd "${HOME}"
 PKGS=(
 
 	# ----- Classification -----
-	'i3',		# Window Manager
-	'spotify',	# Music Player
+	'i3'		# Window Manager
+	'spotify'	# Music Player
   'lightdm'   # Display Manager
-	'alacritty', 	# Terminal Emulator
-	'thunar',	# File Manager
-	'firefox',	# Web Browser
-	'signal-desktop',# Encrypted Comms
+	'alacritty' 	# Terminal Emulator
+	'thunar'	# File Manager
+	'firefox'	# Web Browser
+	'signal-desktop'# Encrypted Comms
   # CLI Tools
-	'neovim',	# NeoVim Editor
-	'docker',	# Containerisation
+	'neovim'	# NeoVim Editor
+	'docker'	# Containerisation
 	'docker-compose'# Containerisation
-	'tree',						# Cli directory visualisation
-	'dotnet-sdk', 	# Dotner Dev
-	'aspnet-runtime', 	# Dotnet Dev
-	'tmux', 	# Terminal Multiplexer
-	'feh', 	# Wallpaper Controller
-  'xclip',    # Clipboard Cli Utility
-  'gawk',     # Awk Implementation
-  'jq',        # Json Query
-  'man-db',
-  'man-pages',
-  'tar',
-  'tmux',
-  'wget',
-  'bash-completion',
-  'lazygit',
+	'tree'						# Cli directory visualisation
+	'dotnet-sdk' 	# Dotner Dev
+	'aspnet-runtime' 	# Dotnet Dev
+	'tmux' 	# Terminal Multiplexer
+	'feh' 	# Wallpaper Controller
+  'xclip'    # Clipboard Cli Utility
+  'gawk'     # Awk Implementation
+  'jq'        # Json Query
+  'man-db'
+  'man-pages'
+  'tar'
+  'tmux'
+  'wget'
+  'bash-completion'
+  'lazygit'
+  'pulsemixer'
+  'blueman'
   # Language Servers
-  'yaml-language-server',
-  'lua-language-server',
+  'yaml-language-server'
+  'lua-language-server'
   # NVim requirements
-  'ripgrep',  # Grep CMD Tool for telescope
-  'fd',       # Find Alternative for Telescope
+  'ripgrep'  # Grep CMD Tool for telescope
+  'fd'       # Find Alternative for Telescope
 )
 
 for PKG in "${PKGS[@]}"; do

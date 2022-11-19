@@ -13,8 +13,8 @@ PKGS=(
 	'spotify'	# Music Player
 	'polybar'	# I3 Bar
     'obsidian'  # Note Taking
-    'omnisharp-roslyn',
-	'nerd-fonts-hack', # Font for DevIcons
+    'omnisharp-roslyn'
+	'nerd-fonts-hack' # Font for DevIcons
 )
 
 installYay(){
