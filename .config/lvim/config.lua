@@ -72,13 +72,15 @@ lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 lvim.builtin.treesitter.ensure_installed = {
   "bash",
   "json",
-  "lua",
   "python",
-  "rust",
   "yaml",
-  "csharp",
+  "c_sharp",
   "go",
-  "c"
+  "c",
+  -- Required for Rust
+	"lua",
+	"rust",
+	"toml",
 }
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
@@ -180,3 +182,4 @@ lvim.builtin.treesitter.highlight.enable = true
 --     require("nvim-treesitter.highlight").attach(0, "bash")
 --   end,
 -- })
+require('rust_config')
