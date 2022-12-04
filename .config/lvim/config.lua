@@ -77,7 +77,6 @@ lvim.builtin.treesitter.ensure_installed = {
   "rust",
   "yaml",
   "csharp",
-  "powershell",
   "go",
   "c"
 }
