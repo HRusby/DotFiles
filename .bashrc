@@ -29,5 +29,5 @@ alias config='/usr/bin/git --git-dir=/home/harry/.dotfiles/ --work-tree=/home/ha
 
 alias pacman-show-orphans='pacman -Qtdq'
 alias pacman-remove-orphans='sudo pacman -Rns $(pacman -Qtdq)'
-
+alias lvim='/home/harry/.local/bin/lvim'
 export PATH="/home/harry/scripts:$PATH"

@@ -4,5 +4,7 @@
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 # Add .NET Core SDK tools
-export EDITOR=nvim
+export EDITOR=lvim
 export PATH="$PATH:/home/harry/.dotnet/tools"
+alias lvim='/home/harry/.local/bin/lvim'
+alias nvim='lvim'
