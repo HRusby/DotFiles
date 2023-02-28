@@ -14,7 +14,7 @@ PKGS=(
 	'polybar'	# I3 Bar
     'obsidian'  # Note Taking
     'omnisharp-roslyn'
-	'nerd-fonts-hack' # Font for DevIcons
+	'ttf-nerd-fonts-hack-complete-git' # Font for DevIcons
 )
 
 installYay(){
