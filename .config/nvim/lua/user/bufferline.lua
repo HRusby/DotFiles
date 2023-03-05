@@ -165,4 +165,4 @@ bufferline.setup {
       bg = { attribute = "bg", highlight = "Normal" },
     },
   },
-} 
+}

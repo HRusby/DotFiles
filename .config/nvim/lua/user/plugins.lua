@@ -68,7 +68,9 @@ return packer.startup(function(use)
 
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
-  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  --[[ use "williamboman/nvim-lsp-installer" -- simple to use language server installer ]]
+  use "williamboman/mason.nvim"
+  use "williamboman/mason-lspconfig.nvim"
   use "jose-elias-alvarez/null-ls.nvim" -- for formatting/linting
 
   -- Telescope
@@ -98,6 +100,9 @@ return packer.startup(function(use)
 
   -- ToggleTerm --
   use "akinsho/toggleterm.nvim"
+
+  -- SmartColumn --
+  use "m4xshen/smartcolumn.nvim"
 
   use "ahmedkhalf/project.nvim"
   use 'lewis6991/impatient.nvim'
