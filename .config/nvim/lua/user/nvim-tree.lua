@@ -104,3 +104,11 @@ nvim_tree.setup {
     }
   },
 }
+
+-- Close NVimTree when attemtpting to quit nvim. 
+-- QuitPre is triggered before deciding whether to quit or not
+-- Has the downside that if QuitPre fails, NvimTree will always be closed
+vim.api.nvim_create_autocmd({"QuitPre"}, {
+    callback = function() vim.cmd("NvimTreeClose") end,
+})
+
