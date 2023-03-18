@@ -1,3 +1,9 @@
+local status_ok, wk = pcall(require, "which-key")
+if not status_ok then
+  vim.notify("which-key not available")
+  return
+end
+
 local opts = { noremap = true, silent = true }
 
 local term_opts = { silent = true }
@@ -25,7 +31,30 @@ keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
-
+-- Register Normal Mode mappings
+wk.register({
+  ["<leader>f"] = {
+    name = "File",
+    f = {
+      "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
+      "Find File"
+    },
+    g = {
+      "<cmd>lua require'telescope.builtin'.live_grep()<cr>",
+      "Grep"
+    },
+  },
+  ["<leader>p"] = {
+    "<cmd>lua require'telescope'.extensions.projects.projects()<cr>", "Open Project"
+  },
+  ["<leader>e"] = {
+    ":NvimTreeToggle<cr>", "Open Tree"
+  },
+  ["<leader>kf"] = {
+    ":Format<cr>", "Format File"
+  },
+  ["\""] = { name = "Register" },
+}, { mode = "n", noremap = true, silent = true })
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
@@ -68,11 +97,4 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
--- Telescope --
-keymap("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
-keymap("n", "<leader>fg", "<cmd>lua require'telescope.builtin'.live_grep()<cr>", opts)
-keymap("n", "<leader>p", "<cmd>lua require'telescope'.extensions.projects.projects()<cr>", opts)
 
--- Open NvimTree Pane
-keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
-keymap("n", "<leader>kf", ":Format<cr>", opts)
