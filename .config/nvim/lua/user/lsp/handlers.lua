@@ -1,3 +1,9 @@
+local status_ok, wk = pcall(require, "which-key")
+if not status_ok then
+  vim.notify("which-key not available")
+  return
+end
+
 local M = {}
 
 -- TODO: backfill this to template
@@ -68,18 +74,40 @@ local function lsp_keymaps(bufnr)
           border="rounded",
       }
   })
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
+  wk.register({
+    g = {
+      Name = "LSP",
+      D = {"<cmd>lua vim.lsp.buf.declaration()<CR>", "Go to Declaration"},
+      d = {"<cmd>lua vim.lsp.buf.definition()<CR>", "Go to Definition"},
+      i = {"<cmd>lua vim.lsp.buf.implementation()<CR>", "Go to Implementation"},
+      r = {"<cmd>lua vim.lsp.buf.references()<CR>", "Show References"},
+      l = {"<cmd>lua vim.diagnostic.open_float(0, {scope='line'})<CR>", "Show Diagnostics"}
+    },
+    K = {"<cmd>lua vim.lsp.buf.hover()<CR>", "Show Info on Cursor"},
+    ["<C-k>"] = {"<cmd>lua vim.lsp.buf.signature_help()<CR>", "Show Signature Help"},
+    ["<leader>"] = {
+      ["rn"] = {"<cmd>lua vim.lsp.buf.rename()<CR>", "Rename Symbol"},
+      ["ca"] = {"<cmd>lua vim.lsp.buf.code_action()<CR>", "Code Action"}
+    },
+    ["["] = {
+      d = {"<cmd>lua vim.diagnostic.goto_prev({ border = 'rounded' })<CR>", "Go To Previous"},
+    },
+    ["]"] = {
+      d = {"<cmd>lua vim.diagnostic.goto_prev({ border = 'rounded' })<CR>", "Go To Next"}
+    }
+  }, { mode = "n", noremap = true, silent = true, buffer = bufnr})
+  --[[ vim.api.nvim_buf_set_keymap(bufnr, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts) ]]
+  --[[ vim.api.nvim_buf_set_keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts) ]]
+  --[[ vim.api.nvim_buf_set_keymap(bufnr, "n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts) ]]
+  --[[ vim.api.nvim_buf_set_keymap(bufnr, "n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts) ]]
+  --[[ vim.api.nvim_buf_set_keymap(bufnr, "n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts) ]]
+  --[[ vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts) ]]
+  --[[ vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts) ]]
+  --[[ vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts) ]]
   --[[ vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>f", "<cmd>lua vim.diagnostic.open_float()<CR>", opts) ]]
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "[d", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "gl", '<cmd>lua vim.diagnostic.open_float(0, {scope="line"})<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)
+  --[[ vim.api.nvim_buf_set_keymap(bufnr, "n", "[d", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', opts) ]]
+  --[[ vim.api.nvim_buf_set_keymap(bufnr, "n", "gl", '<cmd>lua vim.diagnostic.open_float(0, {scope="line"})<CR>', opts) ]]
+  --[[ vim.api.nvim_buf_set_keymap(bufnr, "n", "]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts) ]]
   vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
   vim.cmd [[ command! Format execute 'lua vim.lsp.buf.format()' ]]
 end
