@@ -40,7 +40,8 @@ PKGS=(
   'pulsemixer'
   'blueman'
   'xrandr'
-  'arandr'
+  'arandr'  # Modern Program Launcher (DMenu extension)
+  'rofi'
   # Language Servers
   'yaml-language-server'
   'lua-language-server'
