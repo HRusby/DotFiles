@@ -34,5 +34,4 @@ fi
 
 dunst &
 /home/harry/scripts/runStartup &
-i3 &
-picom -b
+i3

@@ -220,6 +220,8 @@ mode "$mode_gaps_i" {
 }
 #smart_gaps on
 
+default_border pixel 1
+default_floating_border pixel 1
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 #bar {
@@ -231,4 +233,4 @@ mode "$mode_gaps_i" {
 #Custom Macros#
 ###############
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
+exec_always --no-startup-id picom -b 

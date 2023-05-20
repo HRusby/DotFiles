@@ -187,15 +187,40 @@ bindsym $mod+r mode "resize"
 ########
 # GAPS #
 ########
-for_window [class=".*"] border pixel 0
 gaps inner 10
-gaps outer 10
-bindsym $mod+Shift+d	gaps inner all set 0; gaps outer all set 0
-bindsym $mod+Shift+t	gaps inner all set 10; gaps outer all set 10
-bindsym $mod+Shift+plus gaps horizontal current plus $gapChange; gaps vertical current plus $gapChange
-bindsym $mod+Shift+minus gaps horizontal current minus $gapChange; gaps vertical current minus $gapChange
-#smart_gaps on
+gaps outer 5
+bindsym $mod+g mode "$mode_gaps"
 
+# Gaps settings mode
+set $mode_gaps Gaps: (e) esterni, (i) interni
+set $mode_gaps_e Gaps Esterni: +|-|0
+set $mode_gaps_i Gaps Interni: +|-|0
+
+mode "$mode_gaps" {
+	bindsym e	mode "$mode_gaps_e"
+	bindsym i 	mode "$mode_gaps_i"
+	bindsym Return	mode "default"
+	bindsym Escape	mode "default"
+}
+
+mode "$mode_gaps_e" {
+	bindsym plus	gaps outer all plus 5
+	bindsym minus	gaps outer all minus 5
+	bindsym 0	gaps outer all set 5
+	bindsym Return	mode "default"
+	bindsym Escape	mode "default"
+}
+
+mode "$mode_gaps_i" {
+	bindsym plus	gaps inner all plus 5
+	bindsym minus	gaps inner all minus 5
+	bindsym 0	gaps inner all set 10
+	bindsym Return	mode "default"
+	bindsym Escape	mode "default"
+}
+#smart_gaps on
+default_border pixel 1
+default_floating_border pixel 1
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 #bar {
