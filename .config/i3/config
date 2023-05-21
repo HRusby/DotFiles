@@ -192,13 +192,17 @@ gaps outer 5
 bindsym $mod+g mode "$mode_gaps"
 
 # Gaps settings mode
-set $mode_gaps Gaps: (e) esterni, (i) interni
-set $mode_gaps_e Gaps Esterni: +|-|0
-set $mode_gaps_i Gaps Interni: +|-|0
+set $mode_gaps Gaps: (e) esternal, (i) internal, (h) horizontal, (v) vertical
+set $mode_gaps_e Gaps Esternal: +|-|0
+set $mode_gaps_i Gaps Internal: +|-|0
+set $mode_gaps_v Gaps Vertical: +|-|0
+set $mode_gaps_h Gaps Horizontal: +|-|0
 
 mode "$mode_gaps" {
 	bindsym e	mode "$mode_gaps_e"
 	bindsym i 	mode "$mode_gaps_i"
+	bindsym v 	mode "$mode_gaps_v"
+	bindsym h 	mode "$mode_gaps_h"
 	bindsym Return	mode "default"
 	bindsym Escape	mode "default"
 }
@@ -215,6 +219,21 @@ mode "$mode_gaps_i" {
 	bindsym plus	gaps inner all plus 5
 	bindsym minus	gaps inner all minus 5
 	bindsym 0	gaps inner all set 10
+	bindsym Return	mode "default"
+	bindsym Escape	mode "default"
+}
+
+mode "$mode_gaps_v" {
+	bindsym plus	gaps vertical all plus 5
+	bindsym minus	gaps vertical all minus 5
+	bindsym 0	gaps vertical all set 5
+	bindsym Return	mode "default"
+	bindsym Escape	mode "default"
+}
+mode "$mode_gaps_h" {
+	bindsym plus	gaps horizontal all plus 5
+	bindsym minus	gaps horizontal all minus 5
+	bindsym 0	gaps horizontal all set 5
 	bindsym Return	mode "default"
 	bindsym Escape	mode "default"
 }
