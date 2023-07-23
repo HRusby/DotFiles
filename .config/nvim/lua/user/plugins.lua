@@ -91,6 +91,11 @@ return packer.startup(function(use)
   use "kyazdani42/nvim-web-devicons"
   use "kyazdani42/nvim-tree.lua"
 
+  -- Debug Adaptor Protocol
+  use "mfussenegger/nvim-dap"
+  use {"nvim-telescope/telescope-dap.nvim", requires = {"mfussenegger/nvim-dap"} }
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+
   --Bufferline --
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
