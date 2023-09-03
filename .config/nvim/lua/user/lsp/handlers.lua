@@ -119,16 +119,17 @@ M.on_attach = function(client, bufnr)
   -- Omnisharp doesn't conform to standard LSP token names. The below code looks up Omnisharps tokens
   -- and replaces them with correct tokens (Replacing ' ' with '_')
   -- Open issue with Omnisharp here: https://github.com/OmniSharp/omnisharp-roslyn/issues/2483
-  if client.name == 'omnisharp' then
-    local tokenModifiers = client.server_capabilities.semanticTokensProvider.legend.tokenModifiers
-    for i, v in ipairs(tokenModifiers) do
-      tokenModifiers[i] = v:gsub(' ', '_')
-    end
-    local tokenTypes = client.server_capabilities.semanticTokensProvider.legend.tokenTypes
-    for i, v in ipairs(tokenTypes) do
-      tokenTypes[i] = v:gsub(' ', '_')
-    end
-  end
+  --[[ if client.name == 'omnisharp' then ]]
+  --[[   vim.notify("Omnisharp setup") ]]
+  --[[   local tokenModifiers = client.server_capabilities.semanticTokensProvider.legend.tokenModifiers ]]
+  --[[   for i, v in ipairs(tokenModifiers) do ]]
+  --[[     tokenModifiers[i] = v:gsub(' ', '_') ]]
+  --[[   end ]]
+  --[[   local tokenTypes = client.server_capabilities.semanticTokensProvider.legend.tokenTypes ]]
+  --[[   for i, v in ipairs(tokenTypes) do ]]
+  --[[     tokenTypes[i] = v:gsub(' ', '_') ]]
+  --[[   end ]]
+  --[[ end ]]
   lsp_keymaps(bufnr)
   lsp_highlight_document(client)
 end

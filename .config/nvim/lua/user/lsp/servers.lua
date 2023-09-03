@@ -5,7 +5,7 @@ if not status_ok then
 	return
 end
 
-local servers = {  "omnisharp" }
+local servers = { "rust_analyzer", "jsonls", "lua_ls", "pyright", "yamlls", "volar", "bashls", "omnisharp" }
 for _, server in ipairs(servers) do
   local opts = {
     on_attach = require("user/lsp/handlers").on_attach,
