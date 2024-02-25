@@ -37,6 +37,12 @@ PKGS=(
   'wget'
   'bash-completion'
   'lazygit'
+  # Setting up Audio via Pipewire
+  'pipewire'
+  'pipewire-audio'
+  'pipewire-alsa'
+  'pipewire-pulse'
+  'wireplumber'
   'pulsemixer'
   'blueman'
   'xrandr'
