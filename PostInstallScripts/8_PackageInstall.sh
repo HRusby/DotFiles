@@ -23,20 +23,28 @@ PKGS=(
 	'docker'	# Containerisation
 	'docker-compose'# Containerisation
 	'tree'						# Cli directory visualisation
-	'dotnet-sdk' 	# Dotner Dev
+	'dotnet-runtime' # Dotnet Run
+	'dotnet-sdk' 	# Dotnet Dev
 	'aspnet-runtime' 	# Dotnet Dev
+  'cargo'   # Rust Package Manager
+  'rust'  # Rust Language
 	'tmux' 	# Terminal Multiplexer
 	'feh' 	# Wallpaper Controller
   'xclip'    # Clipboard Cli Utility
   'gawk'     # Awk Implementation
   'jq'        # Json Query
+  'bat'   # Modern Cat
+  'atuin' # Improved terminal history
   'man-db'
   'man-pages'
+  'tldr' # Man Summariser
+  'dnsutils'
   'tar'
   'tmux'
   'wget'
   'bash-completion'
   'lazygit'
+  'xsel' # Clipboard Manager
   # Setting up Audio via Pipewire
   'pipewire'
   'pipewire-audio'
@@ -45,6 +53,7 @@ PKGS=(
   'wireplumber'
   'pulsemixer'
   'blueman'
+  # Monitor Manager
   'xrandr'
   'arandr'  
   'rofi'  # Modern Program Launcher (DMenu extension)
