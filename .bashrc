@@ -31,3 +31,6 @@ alias pacman-show-orphans='pacman -Qtdq'
 alias pacman-remove-orphans='sudo pacman -Rns $(pacman -Qtdq)'
 alias lvim='/home/harry/.local/bin/lvim'
 export PATH="/home/harry/scripts:$PATH"
+
+[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+eval "$(atuin init bash --disable-up-arrow)"
