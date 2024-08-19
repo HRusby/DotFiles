@@ -12,15 +12,14 @@ _CYAN="$(tput setaf 6)"
 _WHITE="$(tput setaf 7)"
 _NC="$(tput sgr0)"
 
-
 export GOPATH="/home/harry/go"
 
-pulse-discover-devices () {
-	pacmd unload-module module-udev-detect && pacmd load-module module-udev-detect	
+pulse-discover-devices() {
+	pacmd unload-module module-udev-detect && pacmd load-module module-udev-detect
 }
 
-vim () {
-	nvim $@
+vim() {
+	nvim "$@"
 }
 
 PS1="[\[\${_CYAN}\]\u\[\${_BLUE}\]@\[\${_CYAN}\]\h]\[\${_WHITE}\] \@ \w \n\$\[${_NC}\] "
@@ -34,3 +33,7 @@ export PATH="/home/harry/scripts:$PATH"
 
 [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
 eval "$(atuin init bash --disable-up-arrow)"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+eval "$(oh-my-posh init bash --config "$HOME/omp.toml")"
+# --config "$(brew --prefix oh-my-posh)"/themes/gruvbox.omp.json)"
