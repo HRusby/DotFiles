@@ -187,13 +187,14 @@ bindsym $mod+r mode "resize"
 ########
 # GAPS #
 ########
-gaps inner 10
-gaps outer 5
+gaps inner 20
+gaps outer 20
+gaps horizontal 20
 bindsym $mod+g mode "$mode_gaps"
 
 # Gaps settings mode
-set $mode_gaps Gaps: (e) esternal, (i) internal, (h) horizontal, (v) vertical
-set $mode_gaps_e Gaps Esternal: +|-|0
+set $mode_gaps Gaps: (e) external, (i) internal, (h) horizontal, (v) vertical
+set $mode_gaps_e Gaps External: +|-|0
 set $mode_gaps_i Gaps Internal: +|-|0
 set $mode_gaps_v Gaps Vertical: +|-|0
 set $mode_gaps_h Gaps Horizontal: +|-|0
