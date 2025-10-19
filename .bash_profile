@@ -11,3 +11,5 @@ alias nvim='lvim'
 xclip -o | xclip -selection clipboard -i
 
 . "$HOME/.atuin/bin/env"
+
+. "$HOME/.local/bin/env"

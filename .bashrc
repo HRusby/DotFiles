@@ -37,3 +37,5 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 eval "$(oh-my-posh init bash --config "$HOME/omp.toml")"
 # --config "$(brew --prefix oh-my-posh)"/themes/gruvbox.omp.json)"
+
+. "$HOME/.local/bin/env"

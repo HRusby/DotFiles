@@ -22,4 +22,5 @@ return {
   { import = "astrocommunity.pack.sql" },
   { import = "astrocommunity.pack.toml" },
   { import = "astrocommunity.pack.yaml" },
+  { import = "astrocommunity.pack.typescript" },
 }
